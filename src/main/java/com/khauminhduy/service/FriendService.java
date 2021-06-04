@@ -10,6 +10,8 @@ public interface FriendService {
 	
 	Friend get(Long id);
 	
+	List<Friend> getByFirstNameAndLastName(String firstName, String lastName);
+	
 	Friend save(Friend friend);
 	
 	void delete(Long id);

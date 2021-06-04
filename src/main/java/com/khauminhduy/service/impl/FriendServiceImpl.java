@@ -35,4 +35,9 @@ public class FriendServiceImpl implements FriendService {
 		friendRepository.deleteById(id);
 	}
 
+	@Override
+	public List<Friend> getByFirstNameAndLastName(String firstName, String lastName) {
+		return friendRepository.findByFirstNameAndLastName(firstName, lastName);
+	}
+
 }
