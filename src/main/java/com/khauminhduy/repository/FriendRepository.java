@@ -11,4 +11,10 @@ import com.khauminhduy.model.Friend;
 public interface FriendRepository extends JpaRepository<Friend, Long> {
 
 	List<Friend> findByFirstNameAndLastName(String firstName, String lastName);
+	
+	List<Friend> findByFirstName(String firstname);
+	
+	List<Friend> findByLastName(String lastName);
+	
+	
 }

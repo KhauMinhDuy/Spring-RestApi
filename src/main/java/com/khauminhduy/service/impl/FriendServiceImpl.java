@@ -36,8 +36,18 @@ public class FriendServiceImpl implements FriendService {
 	}
 
 	@Override
-	public List<Friend> getByFirstNameAndLastName(String firstName, String lastName) {
+	public List<Friend> findByFirstNameAndLastName(String firstName, String lastName) {
 		return friendRepository.findByFirstNameAndLastName(firstName, lastName);
+	}
+
+	@Override
+	public List<Friend> findByFirstName(String firstname) {
+		return friendRepository.findByFirstName(firstname);
+	}
+
+	@Override
+	public List<Friend> findByLastName(String lastName) {
+		return friendRepository.findByLastName(lastName);
 	}
 
 }

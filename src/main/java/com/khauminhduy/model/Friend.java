@@ -5,6 +5,9 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 import lombok.Data;
 
 @Entity
@@ -15,9 +18,14 @@ public class Friend {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 
+	@JsonProperty(value = "first-name")
 	private String firstName;
 
+	@JsonProperty(value = "last-name")
 	private String lastName;
+	
+	@JsonIgnore
+	private String married;
 
 	public Friend() {
 		super();

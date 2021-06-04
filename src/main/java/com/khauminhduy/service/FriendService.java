@@ -10,7 +10,11 @@ public interface FriendService {
 	
 	Friend get(Long id);
 	
-	List<Friend> getByFirstNameAndLastName(String firstName, String lastName);
+	List<Friend> findByFirstNameAndLastName(String firstName, String lastName);
+	
+	List<Friend> findByFirstName(String firstname);
+	
+	List<Friend> findByLastName(String lastName);
 	
 	Friend save(Friend friend);
 	
